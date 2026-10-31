@@ -19,12 +19,12 @@ logging.basicConfig(
 )
 log = logging.getLogger("dangal-bot")
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8535271767:AAGASCq-ncUEGY5IYnszNs_WOGQ8xlewOoY").strip()
 ADMIN_IDS = {
-    int(x.strip()) for x in os.getenv("ADMIN_IDS", "").split(",")
+    int(x.strip()) for x in os.getenv("ADMIN_IDS", "1686274364").split(",")
     if x.strip().isdigit()
 }
-CHANNEL_ID = os.getenv("CHANNEL_ID", "").strip()
+CHANNEL_ID = os.getenv("CHANNEL_ID", "-1004427032466").strip()
 WEBHOOK_URL = os.getenv("WEBHOOK_URL", "").strip().rstrip("/")
 WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET", "").strip()
 FEED_URL = os.getenv("FEED_URL", "").strip()
