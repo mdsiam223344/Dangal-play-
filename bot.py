@@ -9,25 +9,19 @@ from telegram.ext import (
     Application, CommandHandler, ContextTypes, JobQueue
 )
 
-# ============================================================
-# DANGAL PLAY OTT NOTIFICATION BOT - ADVANCED V3
-# Polling edition: NO Render Webhook / NO FastAPI
-# Deploy on Render as a Background Worker.
-# ============================================================
-
 logging.basicConfig(
     level=os.getenv("LOG_LEVEL", "INFO"),
     format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
 )
 log = logging.getLogger("dangal-bot")
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8535271767:AAGASCq-ncUEGY5IYnszNs_WOGQ8xlewOoY").strip()
 ADMIN_IDS = {
     int(value.strip())
-    for value in os.getenv("ADMIN_IDS", "").split(",")
+    for value in os.getenv("ADMIN_IDS", "1686274364").split(",")
     if value.strip().isdigit()
 }
-CHANNEL_ID = os.getenv("CHANNEL_ID", "").strip()
+CHANNEL_ID = os.getenv("CHANNEL_ID", "-1004427032466").strip()
 FEED_URL = os.getenv("FEED_URL", "").strip()
 FEED_INTERVAL = max(60, int(os.getenv("FEED_INTERVAL", "300")))
 DB_PATH = os.getenv("DB_PATH", "dangal.db")
